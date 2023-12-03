@@ -395,6 +395,8 @@ if __name__ == '__main__':
     else:
         _no_gui = False
 
+    print("hello world")
+
     print(
         'Options - skip:{}, threads:{}, google:{}, transparent:{}, naver:{}, full_resolution:{}, face:{}, no_gui:{}, limit:{}, _proxy_list:{}'
             .format(_skip, _threads, _google, _transparent, _naver, _full, _face, _no_gui, _limit, _proxy_list))

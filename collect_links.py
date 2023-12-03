@@ -223,13 +223,13 @@ class CollectLinks:
         # while True:
         for _ in range(limit):
             try:
-                xpath = '//div[@id="islsp"]//div[@class="v4dQwb"]'
+                xpath = '//div[@id="islsp"]//div[@class="dAq2fd"]' # islsp
                 div_box = self.browser.find_element(By.XPATH, xpath)
                 self.highlight(div_box)
 
                 for _ in range(NUM_MAX_RETRY):
                     try:
-                        xpath = '//img[@class="n3VNCb pT0Scc KAlRDb"]'
+                        xpath = '//img[@class="sFlh5c pT0Scc iPVvYb"]' # click
                         img = div_box.find_element(By.XPATH, xpath)
                         self.highlight(img)
                         break
@@ -237,13 +237,13 @@ class CollectLinks:
                         time.sleep(0.1)
                         pass
 
-                xpath = '//div[@class="k7O2sd"]'
+                xpath = '//div[@class="VeTdYb"]' # display: none;
                 loading_bar = div_box.find_element(By.XPATH, xpath)
 
                 # Wait for image to load. If not it will display base64 code.
                 while str(loading_bar.get_attribute('style')) != 'display: none;':
                     time.sleep(0.1)
-
+                
                 src = img.get_attribute('src')
 
                 if src is not None:
